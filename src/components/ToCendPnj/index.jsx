@@ -1,0 +1,1 @@
+//permet de choisire les pnj as envoyer sur la table des Beligeran
