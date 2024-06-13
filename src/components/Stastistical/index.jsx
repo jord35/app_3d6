@@ -1,2 +1,3 @@
-// permet de definire les statistique du pj/pnj 
-// le mj peut modifier les valeur et les changemen temporaire aporter s'aficheron  sur l'interface Player
+// Permet de définir les statistiques du PJ/PNJ.
+// Le MJ peut modifier les valeurs et les changements 
+//temporaires apportés s'afficheront sur l'interface joueur.

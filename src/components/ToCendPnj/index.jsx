@@ -1,1 +1,1 @@
-//permet de choisire les pnj as envoyer sur la table des Beligeran
+//Permet de choisir les PNJ à envoyer sur la table des Béligeran.

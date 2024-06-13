@@ -1,2 +1,3 @@
-// block mapen sur les belligeran donner en entrer. pour chaque belligran crée un block constituer de l'image du pnj/joueur 
-// permet de pointer sur le pnj/joueur pour interaction 
+// mappage sur les belligérants donnés en entrée.
+// Pour chaque belligérant, créer un bloc constitué de l'image du PNJ/joueur.
+// Permet de pointer sur le PNJ/joueur pour l'interaction.

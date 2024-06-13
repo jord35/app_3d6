@@ -1,1 +1,2 @@
-// rendu des dice en fonction de leure nombre 1,2,3
+// Rendu des dés en fonction de leur nombre : 1, 2, 3.
+

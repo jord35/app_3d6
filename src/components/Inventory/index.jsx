@@ -1,2 +1,2 @@
-// permet de montrer l'inventaire du pnj/pj selectioner pour le mj
-// le joueur ne pourras voire que sont inventaire
+// Permet de montrer l'inventaire du PNJ/PJ sélectionné pour le MJ.
+// Le joueur ne pourra voir que son propre inventaire.
