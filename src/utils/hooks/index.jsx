@@ -3,43 +3,37 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-const useWebSocket = (url) => {
-  const [socket, setSocket] = useState(null);
+const useWebSocket = (url, userKey) => {
   const [messages, setMessages] = useState([]);
   const [isConnected, setIsConnected] = useState(false);
   const socketRef = useRef(null);
 
   useEffect(() => {
-    // Créer une nouvelle instance WebSocket
     socketRef.current = new WebSocket(url);
 
-    // Événements de connexion
     socketRef.current.onopen = () => {
       setIsConnected(true);
+      // Envoyer la clé utilisateur au serveur
+      socketRef.current.send(JSON.stringify({ type: 'register', key: userKey }));
     };
 
-    // Événements de réception de messages
     socketRef.current.onmessage = (event) => {
       setMessages((prevMessages) => [...prevMessages, event.data]);
     };
 
-    // Événements de déconnexion
     socketRef.current.onclose = () => {
       setIsConnected(false);
     };
 
-    // Événements d'erreur
     socketRef.current.onerror = (error) => {
       console.error("WebSocket error:", error);
     };
 
-    // Nettoyage à la fin du cycle de vie du composant
     return () => {
       socketRef.current.close();
     };
-  }, [url]);
+  }, [url, userKey]);
 
-  // Fonction pour envoyer des messages via le WebSocket
   const sendMessage = (message) => {
     if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
       socketRef.current.send(message);
@@ -52,3 +46,4 @@ const useWebSocket = (url) => {
 };
 
 export default useWebSocket;
+
